@@ -7,4 +7,3 @@
 ![](./assets/4.png)
 # Change color menu
 ![](./assets/5.png)
-![](./assets/6.png)

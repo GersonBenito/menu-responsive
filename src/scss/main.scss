@@ -127,6 +127,12 @@
     }
 }
 
+@media screen and (min-width: 768px){
+    .menu-collapse{
+        display: none !important;
+    }
+}
+
 // start  content page
 .content-page{
     height: 92.5vh;
@@ -142,6 +148,7 @@
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
     &:hover{
         opacity: 0.8;
     }
@@ -161,4 +168,29 @@
     gap: 8px;
     align-items: center;
     height: 100%;
+}
+
+// colors
+.current-color{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .copy-color{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .color{
+        padding: 5px 8px;
+        border-radius: 4px;
+        display: flex;
+        gap: 8px;
+    }
 }

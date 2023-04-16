@@ -71,6 +71,16 @@
   cursor: pointer;
 }
 
+.content-complements-movil {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px;
+}
+.content-complements-movil img {
+  width: 27px;
+  cursor: pointer;
+}
+
 .menu-collapse {
   display: none;
 }

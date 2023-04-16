@@ -82,6 +82,16 @@
     }
 }
 
+.content-complements-movil{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
+    img{
+        width: 27px;
+        cursor: pointer;
+    }
+}
+
 .menu-collapse{
     display: none
 }

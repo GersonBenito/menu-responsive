@@ -26,7 +26,9 @@ addEventListener('DOMContentLoaded', () => {
     const toggleMenu = () =>{
         toogle = !toogle;
         let show = toogle ? 'block' : 'none';
+        let iconMenu = toogle ? 'close-menu' : 'menu-2';
         menuCollapse.style.display = show;
+        iconMenuMovil.src = `assets/${iconMenu}.png`;
         menuCollapse.classList.add('animation-menu-show');
     }
 

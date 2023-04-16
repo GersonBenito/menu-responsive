@@ -5,7 +5,8 @@ addEventListener('DOMContentLoaded', () => {
     const btnBackground = document.querySelector('.btn-bg');
     const btnColor = document.querySelector('.btn-color');
     const menu = document.querySelector('.menu');
-    const menuOption = document.querySelectorAll('.option');
+    const menuOptionsMovil = document.querySelector('.menu-options-collapse');
+    const menuOptionsWeb = document.querySelector('.menu-options');
 
     let toogle = false;
 
@@ -26,7 +27,9 @@ addEventListener('DOMContentLoaded', () => {
     }
 
     const changeTextColor = () => {
-        console.log(randomColor());
+        // console.log(menuOptionsMovil.style);
+        menuOptionsMovil.style.color = randomColor();
+        menuOptionsWeb.style.color = randomColor();
     }
 
     iconMenuMovil.addEventListener('click', toggleMenu);

@@ -5,12 +5,12 @@
 }
 
 @mixin item-menu($top: 0px, $hover: none, $radius: 0px, $pl: 0px){
-    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
     margin-top: $top;
     cursor: pointer;
+    transition: background, 0.3s;
     &:hover{
         color: #f5f1f1;
         background: $hover;
@@ -50,6 +50,7 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    color: #fff;
     .option{
         // include
         @include item-menu();
@@ -86,6 +87,7 @@
 }
 
 .menu-options-collapse{
+    color: #fff;
     .option{
         // include
         @include item-menu(8px, #f4f0f029, 3px, 8px); 
@@ -94,10 +96,11 @@
 
 // animation show menu
 .animation-menu-show{
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-name: slidein;
     animation-iteration-count: 1;
 }
+
 @keyframes slidein {
     from {
       margin-top: -60px;
@@ -105,21 +108,6 @@
   
     to {
       margin-top: 0px;
-    }
-}
-
-.animation-menu-close{
-    animation-duration: 1s;
-    animation-name: slideinClose;
-    animation-iteration-count: 1;
-}
-@keyframes slideinClose {
-    from {
-      margin-bottom: 500px;
-    }
-  
-    to {
-      margin-bottom: 200px;
     }
 }
 
@@ -144,9 +132,7 @@
     height: 92.5vh;
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0px 16px;
 }
 
 .custom-btn{
@@ -167,4 +153,12 @@
 
 .secondary{
     @include type-btn(#28a745)
+}
+
+.actions{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 8px;
+    align-items: center;
+    height: 100%;
 }

@@ -30,14 +30,15 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  color: #fff;
 }
 .menu-options .option {
-  color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   margin-top: 0px;
   cursor: pointer;
+  transition: background, 0.3s;
 }
 .menu-options .option:hover {
   color: #f5f1f1;
@@ -74,13 +75,16 @@
   display: none;
 }
 
-.menu-options-collapse .option {
+.menu-options-collapse {
   color: #fff;
+}
+.menu-options-collapse .option {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
   cursor: pointer;
+  transition: background, 0.3s;
 }
 .menu-options-collapse .option:hover {
   color: #f5f1f1;
@@ -90,7 +94,7 @@
 }
 
 .animation-menu-show {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-name: slidein;
   animation-iteration-count: 1;
 }
@@ -101,20 +105,6 @@
   }
   to {
     margin-top: 0px;
-  }
-}
-.animation-menu-close {
-  animation-duration: 1s;
-  animation-name: slideinClose;
-  animation-iteration-count: 1;
-}
-
-@keyframes slideinClose {
-  from {
-    margin-bottom: 500px;
-  }
-  to {
-    margin-bottom: 200px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -136,9 +126,7 @@
   height: 92.5vh;
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0px 16px;
 }
 
 .custom-btn {
@@ -161,6 +149,14 @@
 .secondary {
   background-color: #28a745;
   color: #f8f9fa;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 8px;
+  align-items: center;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
